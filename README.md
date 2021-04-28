@@ -1,7 +1,7 @@
 # SBM - Stochastic Boltzman Machine Inference
 Stochastic Quasi-Newton Optimizer using Boltzman Machine Updates for Protein Models
 
-## Instal
+## Install
 To use the SBM on Matlab one must perform Mex operation on the c++ files in the Functions folder.
 in matlab, when in the Functions folder run 
 "mex mex C_InverseWeights.cpp" 
