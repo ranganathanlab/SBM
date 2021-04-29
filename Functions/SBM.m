@@ -2,7 +2,7 @@ function [J,h,N_eff,output]=SBM(align,lambdaJ,lambdah,J_init,h_init,options)
     
     %similarity weighting
     if options.theta>0
-        [W,N_eff]=Mex_CalcWeights(align,options.theta);
+        [W,N_eff]=CalcWeights(align,options.theta);
     else
         N_eff=size(align,1);
         W=zeros(size(align,1),1)+1;
@@ -44,7 +44,7 @@ function [grad]=LogLike(wr,lambdaJ,lambdah,fi,fij,options)
     
     % now gradient of it
     if options.sim_weight==1
-        [p,N_eff]=Mex_CalcWeights(align_mod,options.theta);
+        [p,N_eff]=CalcWeights(align_mod,options.theta);
     else        
         p=zeros(options.N,1)+1/options.N;
     end
