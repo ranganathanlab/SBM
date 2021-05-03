@@ -50,7 +50,6 @@ function [grad]=LogLike(wr,lambdaJ,lambdah,fi,fij,options)
     end
     %model MSA stats
     [fi_tot,fij_tot]=CalcStatsWeighted(options.q,align_mod,p);
-    
     %compared to data MSA stats - that is the update rule
     gradh=fi_tot-fi+2*lambdah*h;
     gradJ=(fij_tot-fij+2*lambdaJ*J+2*options.regmat*J).*options.prune;

@@ -49,10 +49,8 @@ fprintf('%10s   %13s   %12s   %12s %12s\n','Iteration','Step Length','X change',
 for i = 1:options.maxIter
 
 
-    if i>2
-        t=min(1,t*(1+options.learn_down)^2);
-    elseif i==2
-        t = 1;
+    if i>1
+        t=1;
     else
         t = min(1,1/sqrt(sum(g.^2)));
     end

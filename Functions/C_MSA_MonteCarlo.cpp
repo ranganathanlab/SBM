@@ -23,7 +23,7 @@ mexFunction(int nlhs, mxArray* plhs[], int nrhs, const mxArray* prhs[])
 #pragma omp parallel for
     for (int n = 0; n < N; n++) 
     {
-
+        
         pcg32 rng;
         rng.seed(seed + n);
         std::uniform_real_distribution<double> uniform(0, 1);
@@ -42,7 +42,7 @@ mexFunction(int nlhs, mxArray* plhs[], int nrhs, const mxArray* prhs[])
             int dq = 1 + (int)(uniform(rng) * (q - 1));
             int cur_aa = align_tmp[pos - 1];
             int new_aa = (cur_aa + dq - 1) % q + 1;
-
+            
             double dE = w[L * (L - 1) / 2 * q * q + (pos - 1) * q + new_aa - 1] -
                       w[L * (L - 1) / 2 * q * q + (pos - 1) * q + cur_aa - 1];
 

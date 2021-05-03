@@ -1,4 +1,4 @@
-cd F    #!/bin/bash
+#!/bin/bash
 set -eu
 
 MATLABROOT='/Applications/MATLAB_R2019b.app'
