@@ -5,7 +5,7 @@ Stochastic Quasi-Newton Optimizer using Boltzman Machine Updates for Protein Mod
 To use the SBM on Matlab one must perform Mex operation on the c++ files in the Functions folder.
 in matlab, when in the Functions folder run 
 ```
-mex mex C_MSA_MonteCarlo.cpp
+mex C_MSA_MonteCarlo.cpp
 ```
 
 In MacOs machines there might be a compatability issue with the compiler (Clang), this will menifest in Matlab crashing when running this.
