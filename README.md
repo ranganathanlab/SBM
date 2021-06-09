@@ -14,3 +14,13 @@ you can see that by running `matlabroot` in matlab. Afterwards, in the terminal,
 ```
 ./mex_openmp.sh C_MSA_MonteCarlo.cpp
 ``` 
+
+## Alignment
+The code includes a line to load a .mat file with an MSA in a form of a numeric matrix called "align" in the data folder.
+To create this alignment from a fasta file just run in the matlab command line
+```
+align=fasta2num(fasta_file);
+```
+and save the align into a matlab file placed inside the data folder.
+
+Alternatively, just replace line 26 in the RunFile with the line above to circumvent the need for the mat file and use only fasta files instead. 
