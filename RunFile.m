@@ -7,7 +7,7 @@ sz=1258;                % if you want to cross validate, pick less than the MSA 
 options.maxIter=500;
 
 options.maxCycle=options.maxIter;     % for N=(MSA size) use 300, if using N=(MSA size/10) and lower use 800+
-options.TolX=10^-5;     % how accurate do you need the parameters to be?
+options.TolX=10^-15;     % how accurate do you need the parameters to be?
 options.N=50;          % size of generated model MSA per BM iteration  
 options.delta_t=100000; % burn time for each sequence
 options.theta=0.3;      % reweighting for similarity, use 0.2-0.3
